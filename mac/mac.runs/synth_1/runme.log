@@ -1,0 +1,1204 @@
+
+*** Running vivado
+    with args -log MAC.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source MAC.tcl
+
+
+****** Vivado v2016.4 (64-bit)
+  **** SW Build 1756540 on Mon Jan 23 19:11:23 MST 2017
+  **** IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+source MAC.tcl -notrace
+Command: synth_design -top MAC -part xc7vx690tffg1761-2
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7vx690t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7vx690t'
+INFO: [Common 17-1223] The version limit for your license is '2017.07' and will expire in -462 days. A version limit expiration means that, although you may be able to continue to use the current version of tools or IP with this license, you will not be eligible for any updates or new releases.
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 4560 
+CRITICAL WARNING: [Synth 8-2490] overwriting previous definition of module CRC32 [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:23]
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:07 ; elapsed = 00:00:51 . Memory (MB): peak = 335.902 ; gain = 125.820
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'MAC' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/mac/rtl/MAC.v:23]
+INFO: [Synth 8-638] synthesizing module 'MAC_TX' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/tx/rtl/MAC_TX.v:23]
+	Parameter ADDRESS_WIDTH bound to: 9 - type: integer 
+	Parameter DATA_WIDTH bound to: 64 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'D_FETCH' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/tx/rtl/D_FETCH.v:23]
+	Parameter MFS bound to: 16'b0000000000111100 
+	Parameter ADDR_WIDTH bound to: 9 - type: integer 
+	Parameter IDLE bound to: 3'b001 
+	Parameter WRITE bound to: 3'b010 
+	Parameter WAIT bound to: 3'b011 
+	Parameter ERROR bound to: 3'b000 
+	Parameter WRITECRC1 bound to: 3'b100 
+	Parameter WRITECRC2 bound to: 3'b111 
+	Parameter PADDING bound to: 3'b101 
+	Parameter CLOCKE1 bound to: 3'b110 
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/tx/rtl/D_FETCH.v:174]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/tx/rtl/D_FETCH.v:213]
+INFO: [Synth 8-256] done synthesizing module 'D_FETCH' (1#1) [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/tx/rtl/D_FETCH.v:23]
+INFO: [Synth 8-638] synthesizing module 'data_trans' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/tx/rtl/data_trans.v:23]
+	Parameter IDLE bound to: 3'b000 
+	Parameter START bound to: 3'b001 
+	Parameter BUSY bound to: 3'b010 
+	Parameter STOP1 bound to: 3'b011 
+	Parameter STOP2 bound to: 3'b101 
+	Parameter IPG bound to: 3'b100 
+	Parameter S0 bound to: 3'b000 
+	Parameter S1 bound to: 3'b001 
+	Parameter S2 bound to: 3'b010 
+	Parameter S3 bound to: 3'b011 
+	Parameter S4 bound to: 3'b100 
+	Parameter S5 bound to: 3'b101 
+	Parameter S6 bound to: 3'b110 
+	Parameter S7 bound to: 3'b111 
+	Parameter I_C bound to: 8'b00000111 
+	Parameter S_C bound to: 8'b11111011 
+	Parameter T_C bound to: 8'b11111101 
+	Parameter E_C bound to: 8'b11111110 
+	Parameter PA bound to: 8'b10101010 
+	Parameter SFD bound to: 8'b10101011 
+WARNING: [Synth 8-151] case item 3'b101 is unreachable [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/tx/rtl/data_trans.v:85]
+WARNING: [Synth 8-151] case item 3'b100 is unreachable [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/tx/rtl/data_trans.v:85]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/tx/rtl/data_trans.v:58]
+INFO: [Synth 8-256] done synthesizing module 'data_trans' (2#1) [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/tx/rtl/data_trans.v:23]
+INFO: [Synth 8-638] synthesizing module 'data_FIFO' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/data_FIFO.v:14]
+	Parameter DATA_WIDTH bound to: 64 - type: integer 
+	Parameter ADDRESS_WIDTH bound to: 9 - type: integer 
+	Parameter FIFO_DEPTH bound to: 512 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'GrayCounterWrite' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/GrayCounterWr.v:9]
+	Parameter COUNTER_WIDTH bound to: 9 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'GrayCounterWrite' (3#1) [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/GrayCounterWr.v:9]
+INFO: [Synth 8-638] synthesizing module 'GrayCounter' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/GrayCounterData.v:9]
+	Parameter COUNTER_WIDTH bound to: 9 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'GrayCounter' (4#1) [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/GrayCounterData.v:9]
+INFO: [Synth 8-256] done synthesizing module 'data_FIFO' (5#1) [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/data_FIFO.v:14]
+INFO: [Synth 8-638] synthesizing module 'length_FIFO' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/tx/rtl/length_FIFO.v:14]
+	Parameter DATA_WIDTH bound to: 16 - type: integer 
+	Parameter ADDRESS_WIDTH bound to: 8 - type: integer 
+	Parameter FIFO_DEPTH bound to: 256 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'GrayCounter__parameterized0' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/GrayCounterData.v:9]
+	Parameter COUNTER_WIDTH bound to: 8 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'GrayCounter__parameterized0' (5#1) [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/GrayCounterData.v:9]
+INFO: [Synth 8-638] synthesizing module 'GrayCounter__parameterized1' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/GrayCounterData.v:9]
+	Parameter COUNTER_WIDTH bound to: 8 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'GrayCounter__parameterized1' (5#1) [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/GrayCounterData.v:9]
+INFO: [Synth 8-256] done synthesizing module 'length_FIFO' (6#1) [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/tx/rtl/length_FIFO.v:14]
+INFO: [Synth 8-638] synthesizing module 'CRC32_TX' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/tx/rtl/CRC32_TX.v:23]
+INFO: [Synth 8-638] synthesizing module 'lut_08' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/lut_08.v:23]
+INFO: [Synth 8-256] done synthesizing module 'lut_08' (7#1) [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/lut_08.v:23]
+INFO: [Synth 8-638] synthesizing module 'lut_07' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/lut_07.v:23]
+INFO: [Synth 8-256] done synthesizing module 'lut_07' (8#1) [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/lut_07.v:23]
+INFO: [Synth 8-638] synthesizing module 'lut_06' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/lut_06.v:23]
+INFO: [Synth 8-256] done synthesizing module 'lut_06' (9#1) [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/lut_06.v:23]
+INFO: [Synth 8-638] synthesizing module 'lut_05' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/lut_05.v:23]
+INFO: [Synth 8-256] done synthesizing module 'lut_05' (10#1) [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/lut_05.v:23]
+INFO: [Synth 8-638] synthesizing module 'lut_04' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/lut_04.v:23]
+INFO: [Synth 8-256] done synthesizing module 'lut_04' (11#1) [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/lut_04.v:23]
+INFO: [Synth 8-638] synthesizing module 'lut_03' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/lut_03.v:23]
+INFO: [Synth 8-256] done synthesizing module 'lut_03' (12#1) [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/lut_03.v:23]
+INFO: [Synth 8-638] synthesizing module 'lut_02' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/lut_02.v:23]
+INFO: [Synth 8-256] done synthesizing module 'lut_02' (13#1) [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/lut_02.v:23]
+INFO: [Synth 8-638] synthesizing module 'lut_01' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/lut_01.v:23]
+INFO: [Synth 8-256] done synthesizing module 'lut_01' (14#1) [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/lut_01.v:23]
+INFO: [Synth 8-256] done synthesizing module 'CRC32_TX' (15#1) [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/tx/rtl/CRC32_TX.v:23]
+INFO: [Synth 8-256] done synthesizing module 'MAC_TX' (16#1) [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/tx/rtl/MAC_TX.v:23]
+WARNING: [Synth 8-350] instance 'TX_TOP' of module 'MAC_TX' requires 15 connections, but only 13 given [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/mac/rtl/MAC.v:51]
+WARNING: [Synth 8-387] label required on module instance [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/mac/rtl/MAC.v:67]
+INFO: [Synth 8-638] synthesizing module 'MAC_RX' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/MAC_RX.v:23]
+WARNING: [Synth 8-387] label required on module instance [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/MAC_RX.v:41]
+INFO: [Synth 8-638] synthesizing module 'RX' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/RX.v:23]
+INFO: [Synth 8-638] synthesizing module 'rxStateMach' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/rxStateMach.v:23]
+WARNING: [Synth 8-5788] Register packet_start_reg in module rxStateMach is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/rxStateMach.v:83]
+INFO: [Synth 8-256] done synthesizing module 'rxStateMach' (17#1) [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/rxStateMach.v:23]
+INFO: [Synth 8-638] synthesizing module 'DAcheck' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/DAcheck.v:8]
+INFO: [Synth 8-256] done synthesizing module 'DAcheck' (18#1) [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/DAcheck.v:8]
+INFO: [Synth 8-638] synthesizing module 'lenTypeReg' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/lenTypeReg.v:5]
+INFO: [Synth 8-256] done synthesizing module 'lenTypeReg' (19#1) [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/lenTypeReg.v:5]
+INFO: [Synth 8-638] synthesizing module 'rxFrameState' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/rxFrameState.v:23]
+	Parameter MIN_FRAME_SIZE bound to: 512 - type: integer 
+	Parameter ADDRESS_SIZE bound to: 48 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'rxFrameState' (20#1) [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/rxFrameState.v:23]
+INFO: [Synth 8-638] synthesizing module 'rxFCSCheck' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/rxFCSCheck.v:23]
+INFO: [Synth 8-638] synthesizing module 'CRC32' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:23]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:121]
+WARNING: [Synth 8-5788] Register FCS_reg in module CRC32 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:211]
+INFO: [Synth 8-256] done synthesizing module 'CRC32' (21#1) [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:23]
+WARNING: [Synth 8-5788] Register FCS_INVALID_reg in module rxFCSCheck is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/rxFCSCheck.v:42]
+WARNING: [Synth 8-5788] Register data_valid_reg in module rxFCSCheck is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/rxFCSCheck.v:110]
+INFO: [Synth 8-256] done synthesizing module 'rxFCSCheck' (22#1) [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/rxFCSCheck.v:23]
+INFO: [Synth 8-638] synthesizing module 'rxSynchr' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/rxSynchr.v:23]
+INFO: [Synth 8-638] synthesizing module 'data_FIFO__parameterized0' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/data_FIFO.v:14]
+	Parameter DATA_WIDTH bound to: 70 - type: integer 
+	Parameter ADDRESS_WIDTH bound to: 9 - type: integer 
+	Parameter FIFO_DEPTH bound to: 512 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'data_FIFO__parameterized0' (22#1) [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/data_FIFO.v:14]
+INFO: [Synth 8-256] done synthesizing module 'rxSynchr' (23#1) [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/rxSynchr.v:23]
+INFO: [Synth 8-256] done synthesizing module 'RX' (24#1) [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/RX.v:23]
+WARNING: [Synth 8-387] label required on module instance [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/MAC_RX.v:56]
+INFO: [Synth 8-638] synthesizing module 'rxRS' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/rxRS.v:23]
+INFO: [Synth 8-638] synthesizing module 'dataCor' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/dataCor.v:23]
+INFO: [Synth 8-256] done synthesizing module 'dataCor' (25#1) [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/dataCor.v:23]
+INFO: [Synth 8-638] synthesizing module 'rxRSstateMach' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/rxRSstateMach.v:23]
+INFO: [Synth 8-256] done synthesizing module 'rxRSstateMach' (26#1) [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/rxRSstateMach.v:23]
+INFO: [Synth 8-638] synthesizing module 'contCharDec' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/contCharDec.v:5]
+	Parameter start_control bound to: 8'b11111011 
+	Parameter terminate_control bound to: 8'b11111101 
+INFO: [Synth 8-256] done synthesizing module 'contCharDec' (27#1) [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/contCharDec.v:5]
+INFO: [Synth 8-256] done synthesizing module 'rxRS' (28#1) [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/rxRS.v:23]
+INFO: [Synth 8-256] done synthesizing module 'MAC_RX' (29#1) [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/MAC_RX.v:23]
+INFO: [Synth 8-256] done synthesizing module 'MAC' (30#1) [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/mac/rtl/MAC.v:23]
+WARNING: [Synth 8-3331] design rxFCSCheck has unconnected port SOF
+WARNING: [Synth 8-3331] design lenTypeReg has unconnected port PLS_DATA_IND[63]
+WARNING: [Synth 8-3331] design lenTypeReg has unconnected port PLS_DATA_IND[62]
+WARNING: [Synth 8-3331] design lenTypeReg has unconnected port PLS_DATA_IND[61]
+WARNING: [Synth 8-3331] design lenTypeReg has unconnected port PLS_DATA_IND[60]
+WARNING: [Synth 8-3331] design lenTypeReg has unconnected port PLS_DATA_IND[59]
+WARNING: [Synth 8-3331] design lenTypeReg has unconnected port PLS_DATA_IND[58]
+WARNING: [Synth 8-3331] design lenTypeReg has unconnected port PLS_DATA_IND[57]
+WARNING: [Synth 8-3331] design lenTypeReg has unconnected port PLS_DATA_IND[56]
+WARNING: [Synth 8-3331] design lenTypeReg has unconnected port PLS_DATA_IND[55]
+WARNING: [Synth 8-3331] design lenTypeReg has unconnected port PLS_DATA_IND[54]
+WARNING: [Synth 8-3331] design lenTypeReg has unconnected port PLS_DATA_IND[53]
+WARNING: [Synth 8-3331] design lenTypeReg has unconnected port PLS_DATA_IND[52]
+WARNING: [Synth 8-3331] design lenTypeReg has unconnected port PLS_DATA_IND[51]
+WARNING: [Synth 8-3331] design lenTypeReg has unconnected port PLS_DATA_IND[50]
+WARNING: [Synth 8-3331] design lenTypeReg has unconnected port PLS_DATA_IND[49]
+WARNING: [Synth 8-3331] design lenTypeReg has unconnected port PLS_DATA_IND[48]
+WARNING: [Synth 8-3331] design lenTypeReg has unconnected port PLS_DATA_IND[31]
+WARNING: [Synth 8-3331] design lenTypeReg has unconnected port PLS_DATA_IND[30]
+WARNING: [Synth 8-3331] design lenTypeReg has unconnected port PLS_DATA_IND[29]
+WARNING: [Synth 8-3331] design lenTypeReg has unconnected port PLS_DATA_IND[28]
+WARNING: [Synth 8-3331] design lenTypeReg has unconnected port PLS_DATA_IND[27]
+WARNING: [Synth 8-3331] design lenTypeReg has unconnected port PLS_DATA_IND[26]
+WARNING: [Synth 8-3331] design lenTypeReg has unconnected port PLS_DATA_IND[25]
+WARNING: [Synth 8-3331] design lenTypeReg has unconnected port PLS_DATA_IND[24]
+WARNING: [Synth 8-3331] design lenTypeReg has unconnected port PLS_DATA_IND[23]
+WARNING: [Synth 8-3331] design lenTypeReg has unconnected port PLS_DATA_IND[22]
+WARNING: [Synth 8-3331] design lenTypeReg has unconnected port PLS_DATA_IND[21]
+WARNING: [Synth 8-3331] design lenTypeReg has unconnected port PLS_DATA_IND[20]
+WARNING: [Synth 8-3331] design lenTypeReg has unconnected port PLS_DATA_IND[19]
+WARNING: [Synth 8-3331] design lenTypeReg has unconnected port PLS_DATA_IND[18]
+WARNING: [Synth 8-3331] design lenTypeReg has unconnected port PLS_DATA_IND[17]
+WARNING: [Synth 8-3331] design lenTypeReg has unconnected port PLS_DATA_IND[16]
+WARNING: [Synth 8-3331] design lenTypeReg has unconnected port PLS_DATA_IND[15]
+WARNING: [Synth 8-3331] design lenTypeReg has unconnected port PLS_DATA_IND[14]
+WARNING: [Synth 8-3331] design lenTypeReg has unconnected port PLS_DATA_IND[13]
+WARNING: [Synth 8-3331] design lenTypeReg has unconnected port PLS_DATA_IND[12]
+WARNING: [Synth 8-3331] design lenTypeReg has unconnected port PLS_DATA_IND[11]
+WARNING: [Synth 8-3331] design lenTypeReg has unconnected port PLS_DATA_IND[10]
+WARNING: [Synth 8-3331] design lenTypeReg has unconnected port PLS_DATA_IND[9]
+WARNING: [Synth 8-3331] design lenTypeReg has unconnected port PLS_DATA_IND[8]
+WARNING: [Synth 8-3331] design lenTypeReg has unconnected port PLS_DATA_IND[7]
+WARNING: [Synth 8-3331] design lenTypeReg has unconnected port PLS_DATA_IND[6]
+WARNING: [Synth 8-3331] design lenTypeReg has unconnected port PLS_DATA_IND[5]
+WARNING: [Synth 8-3331] design lenTypeReg has unconnected port PLS_DATA_IND[4]
+WARNING: [Synth 8-3331] design lenTypeReg has unconnected port PLS_DATA_IND[3]
+WARNING: [Synth 8-3331] design lenTypeReg has unconnected port PLS_DATA_IND[2]
+WARNING: [Synth 8-3331] design lenTypeReg has unconnected port PLS_DATA_IND[1]
+WARNING: [Synth 8-3331] design lenTypeReg has unconnected port PLS_DATA_IND[0]
+WARNING: [Synth 8-3331] design DAcheck has unconnected port PLS_DATA_IND[63]
+WARNING: [Synth 8-3331] design DAcheck has unconnected port PLS_DATA_IND[62]
+WARNING: [Synth 8-3331] design DAcheck has unconnected port PLS_DATA_IND[61]
+WARNING: [Synth 8-3331] design DAcheck has unconnected port PLS_DATA_IND[60]
+WARNING: [Synth 8-3331] design DAcheck has unconnected port PLS_DATA_IND[59]
+WARNING: [Synth 8-3331] design DAcheck has unconnected port PLS_DATA_IND[58]
+WARNING: [Synth 8-3331] design DAcheck has unconnected port PLS_DATA_IND[57]
+WARNING: [Synth 8-3331] design DAcheck has unconnected port PLS_DATA_IND[56]
+WARNING: [Synth 8-3331] design DAcheck has unconnected port PLS_DATA_IND[55]
+WARNING: [Synth 8-3331] design DAcheck has unconnected port PLS_DATA_IND[54]
+WARNING: [Synth 8-3331] design DAcheck has unconnected port PLS_DATA_IND[53]
+WARNING: [Synth 8-3331] design DAcheck has unconnected port PLS_DATA_IND[52]
+WARNING: [Synth 8-3331] design DAcheck has unconnected port PLS_DATA_IND[51]
+WARNING: [Synth 8-3331] design DAcheck has unconnected port PLS_DATA_IND[50]
+WARNING: [Synth 8-3331] design DAcheck has unconnected port PLS_DATA_IND[49]
+WARNING: [Synth 8-3331] design DAcheck has unconnected port PLS_DATA_IND[48]
+WARNING: [Synth 8-3331] design data_trans has unconnected port empty
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:09 ; elapsed = 00:00:52 . Memory (MB): peak = 362.684 ; gain = 152.602
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:52 . Memory (MB): peak = 362.684 ; gain = 152.602
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7vx690tffg1761-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:53 . Memory (MB): peak = 362.684 ; gain = 152.602
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7vx690tffg1761-2
+INFO: [Synth 8-802] inferred FSM for state register 'PS_reg' in module 'D_FETCH'
+INFO: [Synth 8-5544] ROM "NS" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "NS" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "NS" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "NS" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "NS" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-802] inferred FSM for state register 'PS_reg' in module 'data_trans'
+INFO: [Synth 8-5544] ROM "NS" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "NS" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "NS" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "data_valid_encode" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "INTER_DATA" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "FB_4_LAST_BYTE" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "FCS" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "RX_DATA_ST" won't be mapped to RAM because it is too sparse
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                              000 |                              001
+                   WRITE |                              001 |                              010
+                    WAIT |                              010 |                              011
+                   ERROR |                              011 |                              000
+                 PADDING |                              100 |                              101
+               WRITECRC1 |                              101 |                              100
+               WRITECRC2 |                              110 |                              111
+                 CLOCKE1 |                              111 |                              110
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'PS_reg' using encoding 'sequential' in module 'D_FETCH'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                              000 |                              000
+                   START |                              001 |                              001
+                    BUSY |                              010 |                              010
+                   STOP1 |                              011 |                              011
+                   STOP2 |                              100 |                              101
+                     IPG |                              101 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'PS_reg' using encoding 'sequential' in module 'data_trans'
+WARNING: [Synth 8-327] inferring latch for variable 'r_en_reg' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/tx/rtl/data_trans.v:145]
+WARNING: [Synth 8-327] inferring latch for variable 'Status_reg' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/data_FIFO.v:101]
+WARNING: [Synth 8-327] inferring latch for variable 'Status_reg' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/tx/rtl/length_FIFO.v:91]
+WARNING: [Synth 8-327] inferring latch for variable 'FB_4_LAST_BYTE_reg' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:75]
+WARNING: [Synth 8-327] inferring latch for variable 'INTER_DATA_reg' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:68]
+WARNING: [Synth 8-327] inferring latch for variable 'Status_reg' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/data_FIFO.v:101]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:54 . Memory (MB): peak = 492.848 ; gain = 282.766
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input     16 Bit       Adders := 14    
+	   3 Input     16 Bit       Adders := 1     
+	   2 Input      9 Bit       Adders := 4     
+	   2 Input      8 Bit       Adders := 2     
+	   2 Input      2 Bit       Adders := 1     
++---XORs : 
+	   8 Input     32 Bit         XORs := 1     
+	   2 Input     32 Bit         XORs := 6     
+	   9 Input     32 Bit         XORs := 1     
+	   2 Input     24 Bit         XORs := 2     
+	   2 Input     16 Bit         XORs := 2     
+	   2 Input      8 Bit         XORs := 8     
+	   2 Input      7 Bit         XORs := 2     
+	   2 Input      1 Bit         XORs := 12    
++---Registers : 
+	               70 Bit    Registers := 1     
+	               64 Bit    Registers := 8     
+	               32 Bit    Registers := 2     
+	               16 Bit    Registers := 6     
+	                9 Bit    Registers := 9     
+	                8 Bit    Registers := 9     
+	                3 Bit    Registers := 5     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 34    
++---RAMs : 
+	              35K Bit         RAMs := 1     
+	              32K Bit         RAMs := 1     
+	               4K Bit         RAMs := 1     
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 5     
+	   4 Input     64 Bit        Muxes := 1     
+	  10 Input     64 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 1     
+	  10 Input     32 Bit        Muxes := 1     
+	   8 Input     16 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 5     
+	   4 Input     16 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 4     
+	  12 Input      8 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 10    
+	   2 Input      3 Bit        Muxes := 7     
+	   5 Input      3 Bit        Muxes := 3     
+	   3 Input      3 Bit        Muxes := 4     
+	   8 Input      3 Bit        Muxes := 5     
+	  18 Input      3 Bit        Muxes := 1     
+	   6 Input      3 Bit        Muxes := 1     
+	  13 Input      3 Bit        Muxes := 1     
+	   9 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 10    
+	   8 Input      2 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+	   8 Input      1 Bit        Muxes := 19    
+	  16 Input      1 Bit        Muxes := 1     
+	  12 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 6     
+	  11 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 12    
+	   6 Input      1 Bit        Muxes := 2     
+	  10 Input      1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module D_FETCH 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     16 Bit       Adders := 9     
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	               64 Bit    Registers := 2     
+	               16 Bit    Registers := 2     
+	                9 Bit    Registers := 1     
+	                3 Bit    Registers := 2     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 9     
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 2     
+	   8 Input     16 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 3     
+	   2 Input      3 Bit        Muxes := 7     
+	   5 Input      3 Bit        Muxes := 3     
+	   3 Input      3 Bit        Muxes := 3     
+	   8 Input      3 Bit        Muxes := 4     
+	  18 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 6     
+	   8 Input      2 Bit        Muxes := 1     
+	   8 Input      1 Bit        Muxes := 19    
+	  16 Input      1 Bit        Muxes := 1     
+	  12 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 2     
+	  11 Input      1 Bit        Muxes := 1     
+Module data_trans 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     16 Bit       Adders := 1     
++---Registers : 
+	               64 Bit    Registers := 1     
+	               16 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 1     
+	   4 Input     64 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 1     
+	   4 Input     16 Bit        Muxes := 1     
+	  12 Input      8 Bit        Muxes := 1     
+	   3 Input      3 Bit        Muxes := 1     
+	   6 Input      3 Bit        Muxes := 1     
+	  13 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 3     
+	   4 Input      1 Bit        Muxes := 3     
+	   6 Input      1 Bit        Muxes := 2     
+Module GrayCounterWrite 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 1     
++---XORs : 
+	   2 Input      8 Bit         XORs := 2     
++---Registers : 
+	                9 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      9 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 1     
+Module GrayCounter 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 1     
++---XORs : 
+	   2 Input      8 Bit         XORs := 1     
++---Registers : 
+	                9 Bit    Registers := 2     
+Module data_FIFO 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 4     
++---Registers : 
+	               64 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---RAMs : 
+	              32K Bit         RAMs := 1     
+Module GrayCounter__parameterized0 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 1     
++---XORs : 
+	   2 Input      7 Bit         XORs := 1     
++---Registers : 
+	                8 Bit    Registers := 2     
+Module GrayCounter__parameterized1 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 1     
++---XORs : 
+	   2 Input      7 Bit         XORs := 1     
++---Registers : 
+	                8 Bit    Registers := 2     
+Module length_FIFO 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 4     
++---Registers : 
+	               16 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---RAMs : 
+	               4K Bit         RAMs := 1     
+Module CRC32_TX 
+Detailed RTL Component Info : 
++---XORs : 
+	   8 Input     32 Bit         XORs := 1     
+	   2 Input     32 Bit         XORs := 4     
+	   2 Input     24 Bit         XORs := 1     
+	   2 Input     16 Bit         XORs := 1     
+	   2 Input      8 Bit         XORs := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+Module rxStateMach 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 5     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module DAcheck 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 2     
+Module lenTypeReg 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 1     
+Module rxFrameState 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   3 Input     16 Bit       Adders := 1     
+	   2 Input     16 Bit       Adders := 4     
++---Registers : 
+	               64 Bit    Registers := 2     
+	               16 Bit    Registers := 1     
+	                8 Bit    Registers := 2     
+	                3 Bit    Registers := 2     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 1     
+	   8 Input      3 Bit        Muxes := 1     
+	   9 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
+Module CRC32__mod 
+Detailed RTL Component Info : 
++---XORs : 
+	   9 Input     32 Bit         XORs := 1     
+	   2 Input     32 Bit         XORs := 2     
+	   2 Input     24 Bit         XORs := 1     
+	   2 Input     16 Bit         XORs := 1     
+	   2 Input      8 Bit         XORs := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 1     
+	  10 Input     64 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 1     
+	  10 Input     32 Bit        Muxes := 1     
+	  10 Input      1 Bit        Muxes := 2     
+Module rxFCSCheck 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 8     
+Module data_FIFO__parameterized0 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 4     
++---Registers : 
+	               70 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---RAMs : 
+	              35K Bit         RAMs := 1     
+Module rxSynchr 
+Detailed RTL Component Info : 
++---Registers : 
+	               64 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 5     
+Module dataCor 
+Detailed RTL Component Info : 
++---Registers : 
+	               64 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 1     
+Module rxRSstateMach 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 2     
+	   4 Input      1 Bit        Muxes := 1     
+Module contCharDec 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 3600 (col length:200)
+BRAMs: 2940 (col length: RAMB18 200 RAMB36 100)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "data_valid_encode" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "crc_inst/FB_4_LAST_BYTE" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "crc_inst/INTER_DATA" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-3331] design rxFCSCheck has unconnected port SOF
+WARNING: [Synth 8-3331] design DAcheck has unconnected port PLS_DATA_IND[63]
+WARNING: [Synth 8-3331] design DAcheck has unconnected port PLS_DATA_IND[62]
+WARNING: [Synth 8-3331] design DAcheck has unconnected port PLS_DATA_IND[61]
+WARNING: [Synth 8-3331] design DAcheck has unconnected port PLS_DATA_IND[60]
+WARNING: [Synth 8-3331] design DAcheck has unconnected port PLS_DATA_IND[59]
+WARNING: [Synth 8-3331] design DAcheck has unconnected port PLS_DATA_IND[58]
+WARNING: [Synth 8-3331] design DAcheck has unconnected port PLS_DATA_IND[57]
+WARNING: [Synth 8-3331] design DAcheck has unconnected port PLS_DATA_IND[56]
+WARNING: [Synth 8-3331] design DAcheck has unconnected port PLS_DATA_IND[55]
+WARNING: [Synth 8-3331] design DAcheck has unconnected port PLS_DATA_IND[54]
+WARNING: [Synth 8-3331] design DAcheck has unconnected port PLS_DATA_IND[53]
+WARNING: [Synth 8-3331] design DAcheck has unconnected port PLS_DATA_IND[52]
+WARNING: [Synth 8-3331] design DAcheck has unconnected port PLS_DATA_IND[51]
+WARNING: [Synth 8-3331] design DAcheck has unconnected port PLS_DATA_IND[50]
+WARNING: [Synth 8-3331] design DAcheck has unconnected port PLS_DATA_IND[49]
+WARNING: [Synth 8-3331] design DAcheck has unconnected port PLS_DATA_IND[48]
+WARNING: [Synth 8-3331] design data_trans has unconnected port empty
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (TX_TOP/\CRC32_top/FILL_DATA_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (TX_TOP/\CRC32_top/FILL_DATA_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (TX_TOP/\CRC32_top/FILL_DATA_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (TX_TOP/\CRC32_top/FILL_DATA_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (TX_TOP/\CRC32_top/FILL_DATA_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (TX_TOP/\CRC32_top/FILL_DATA_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (TX_TOP/\CRC32_top/FILL_DATA_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (TX_TOP/\CRC32_top/FILL_DATA_reg[0] )
+INFO: [Synth 8-3886] merging instance 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/FB_4_LAST_BYTE_reg[7]' (LD) to 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/FB_4_LAST_BYTE_reg[0]'
+INFO: [Synth 8-3886] merging instance 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/FB_4_LAST_BYTE_reg[6]' (LD) to 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/FB_4_LAST_BYTE_reg[0]'
+INFO: [Synth 8-3886] merging instance 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/FB_4_LAST_BYTE_reg[5]' (LD) to 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/FB_4_LAST_BYTE_reg[0]'
+INFO: [Synth 8-3886] merging instance 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/FB_4_LAST_BYTE_reg[4]' (LD) to 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/FB_4_LAST_BYTE_reg[0]'
+INFO: [Synth 8-3886] merging instance 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/FB_4_LAST_BYTE_reg[3]' (LD) to 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/FB_4_LAST_BYTE_reg[0]'
+INFO: [Synth 8-3886] merging instance 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/FB_4_LAST_BYTE_reg[2]' (LD) to 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/FB_4_LAST_BYTE_reg[0]'
+INFO: [Synth 8-3886] merging instance 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/FB_4_LAST_BYTE_reg[1]' (LD) to 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/FB_4_LAST_BYTE_reg[0]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\nolabel_line67/nolabel_line41 /\rxFCSCheck_inst/crc_inst/FB_4_LAST_BYTE_reg[0] )
+INFO: [Synth 8-3886] merging instance 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/FB_4_LAST_BYTE_reg[0]' (LD) to 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/FB_4_LAST_BYTE_reg[15]'
+INFO: [Synth 8-3886] merging instance 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/FB_4_LAST_BYTE_reg[15]' (LD) to 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/FB_4_LAST_BYTE_reg[8]'
+INFO: [Synth 8-3886] merging instance 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/FB_4_LAST_BYTE_reg[14]' (LD) to 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/FB_4_LAST_BYTE_reg[8]'
+INFO: [Synth 8-3886] merging instance 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/FB_4_LAST_BYTE_reg[13]' (LD) to 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/FB_4_LAST_BYTE_reg[8]'
+INFO: [Synth 8-3886] merging instance 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/FB_4_LAST_BYTE_reg[12]' (LD) to 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/FB_4_LAST_BYTE_reg[8]'
+INFO: [Synth 8-3886] merging instance 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/FB_4_LAST_BYTE_reg[11]' (LD) to 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/FB_4_LAST_BYTE_reg[8]'
+INFO: [Synth 8-3886] merging instance 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/FB_4_LAST_BYTE_reg[10]' (LD) to 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/FB_4_LAST_BYTE_reg[8]'
+INFO: [Synth 8-3886] merging instance 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/FB_4_LAST_BYTE_reg[9]' (LD) to 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/FB_4_LAST_BYTE_reg[8]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\nolabel_line67/nolabel_line41 /\rxFCSCheck_inst/crc_inst/FB_4_LAST_BYTE_reg[8] )
+INFO: [Synth 8-3886] merging instance 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/FCS_reg[0]' (FDC) to 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/FCS_reg[15]'
+INFO: [Synth 8-3886] merging instance 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/FCS_reg[1]' (FDC) to 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/FCS_reg[15]'
+INFO: [Synth 8-3886] merging instance 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/FCS_reg[2]' (FDC) to 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/FCS_reg[15]'
+INFO: [Synth 8-3886] merging instance 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/FCS_reg[3]' (FDC) to 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/FCS_reg[15]'
+INFO: [Synth 8-3886] merging instance 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/FCS_reg[4]' (FDC) to 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/FCS_reg[15]'
+INFO: [Synth 8-3886] merging instance 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/FCS_reg[5]' (FDC) to 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/FCS_reg[15]'
+INFO: [Synth 8-3886] merging instance 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/FCS_reg[6]' (FDC) to 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/FCS_reg[15]'
+INFO: [Synth 8-3886] merging instance 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/FCS_reg[7]' (FDC) to 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/FCS_reg[15]'
+INFO: [Synth 8-3886] merging instance 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/FCS_reg[15]' (FDC) to 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/FCS_reg[8]'
+INFO: [Synth 8-3886] merging instance 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/FCS_reg[14]' (FDC) to 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/FCS_reg[8]'
+INFO: [Synth 8-3886] merging instance 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/FCS_reg[13]' (FDC) to 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/FCS_reg[8]'
+INFO: [Synth 8-3886] merging instance 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/FCS_reg[12]' (FDC) to 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/FCS_reg[8]'
+INFO: [Synth 8-3886] merging instance 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/FCS_reg[11]' (FDC) to 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/FCS_reg[8]'
+INFO: [Synth 8-3886] merging instance 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/FCS_reg[10]' (FDC) to 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/FCS_reg[8]'
+INFO: [Synth 8-3886] merging instance 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/FCS_reg[9]' (FDC) to 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/FCS_reg[8]'
+INFO: [Synth 8-3886] merging instance 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/FB_4_LAST_BYTE_reg[8]' (LD) to 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/FB_4_LAST_BYTE_reg[23]'
+INFO: [Synth 8-3886] merging instance 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/FB_4_LAST_BYTE_reg[23]' (LD) to 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/FB_4_LAST_BYTE_reg[16]'
+INFO: [Synth 8-3886] merging instance 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/FB_4_LAST_BYTE_reg[22]' (LD) to 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/FB_4_LAST_BYTE_reg[16]'
+INFO: [Synth 8-3886] merging instance 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/FB_4_LAST_BYTE_reg[21]' (LD) to 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/FB_4_LAST_BYTE_reg[16]'
+INFO: [Synth 8-3886] merging instance 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/FB_4_LAST_BYTE_reg[20]' (LD) to 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/FB_4_LAST_BYTE_reg[16]'
+INFO: [Synth 8-3886] merging instance 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/FB_4_LAST_BYTE_reg[19]' (LD) to 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/FB_4_LAST_BYTE_reg[16]'
+INFO: [Synth 8-3886] merging instance 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/FB_4_LAST_BYTE_reg[18]' (LD) to 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/FB_4_LAST_BYTE_reg[16]'
+INFO: [Synth 8-3886] merging instance 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/FB_4_LAST_BYTE_reg[17]' (LD) to 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/FB_4_LAST_BYTE_reg[16]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\nolabel_line67/nolabel_line41 /\rxFCSCheck_inst/crc_inst/FB_4_LAST_BYTE_reg[16] )
+INFO: [Synth 8-3886] merging instance 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/FCS_reg[8]' (FDC) to 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/FCS_reg[23]'
+INFO: [Synth 8-3886] merging instance 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/FCS_reg[23]' (FDC) to 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/FCS_reg[16]'
+INFO: [Synth 8-3886] merging instance 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/FCS_reg[22]' (FDC) to 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/FCS_reg[16]'
+INFO: [Synth 8-3886] merging instance 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/FCS_reg[21]' (FDC) to 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/FCS_reg[16]'
+INFO: [Synth 8-3886] merging instance 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/FCS_reg[20]' (FDC) to 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/FCS_reg[16]'
+INFO: [Synth 8-3886] merging instance 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/FCS_reg[19]' (FDC) to 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/FCS_reg[16]'
+INFO: [Synth 8-3886] merging instance 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/FCS_reg[18]' (FDC) to 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/FCS_reg[16]'
+INFO: [Synth 8-3886] merging instance 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/FCS_reg[17]' (FDC) to 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/FCS_reg[16]'
+INFO: [Synth 8-3886] merging instance 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/FB_4_LAST_BYTE_reg[16]' (LD) to 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/FB_4_LAST_BYTE_reg[30]'
+INFO: [Synth 8-3886] merging instance 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/FB_4_LAST_BYTE_reg[30]' (LD) to 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/FB_4_LAST_BYTE_reg[24]'
+INFO: [Synth 8-3886] merging instance 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/FB_4_LAST_BYTE_reg[31]' (LD) to 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/FB_4_LAST_BYTE_reg[24]'
+INFO: [Synth 8-3886] merging instance 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/FB_4_LAST_BYTE_reg[29]' (LD) to 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/FB_4_LAST_BYTE_reg[24]'
+INFO: [Synth 8-3886] merging instance 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/FB_4_LAST_BYTE_reg[28]' (LD) to 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/FB_4_LAST_BYTE_reg[24]'
+INFO: [Synth 8-3886] merging instance 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/FB_4_LAST_BYTE_reg[27]' (LD) to 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/FB_4_LAST_BYTE_reg[24]'
+INFO: [Synth 8-3886] merging instance 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/FB_4_LAST_BYTE_reg[26]' (LD) to 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/FB_4_LAST_BYTE_reg[24]'
+INFO: [Synth 8-3886] merging instance 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/FB_4_LAST_BYTE_reg[25]' (LD) to 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/FB_4_LAST_BYTE_reg[24]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\nolabel_line67/nolabel_line41 /\rxFCSCheck_inst/crc_inst/FB_4_LAST_BYTE_reg[24] )
+INFO: [Synth 8-3886] merging instance 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/FCS_reg[16]' (FDC) to 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/FCS_reg[30]'
+INFO: [Synth 8-3886] merging instance 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/FCS_reg[30]' (FDC) to 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/FCS_reg[24]'
+INFO: [Synth 8-3886] merging instance 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/FCS_reg[31]' (FDC) to 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/FCS_reg[24]'
+INFO: [Synth 8-3886] merging instance 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/FCS_reg[29]' (FDC) to 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/FCS_reg[24]'
+INFO: [Synth 8-3886] merging instance 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/FCS_reg[28]' (FDC) to 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/FCS_reg[24]'
+INFO: [Synth 8-3886] merging instance 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/FCS_reg[27]' (FDC) to 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/FCS_reg[24]'
+INFO: [Synth 8-3886] merging instance 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/FCS_reg[26]' (FDC) to 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/FCS_reg[24]'
+INFO: [Synth 8-3886] merging instance 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/FCS_reg[25]' (FDC) to 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/FCS_reg[24]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\nolabel_line67/nolabel_line41 /\rxFCSCheck_inst/FCS_INVALID_reg )
+WARNING: [Synth 8-3332] Sequential element (data_trans_top/r_en_reg) is unused and will be removed from module MAC_TX.
+WARNING: [Synth 8-3332] Sequential element (data_trans_top/LengthValid_reg) is unused and will be removed from module MAC_TX.
+WARNING: [Synth 8-3332] Sequential element (CRC32_top/FILL_DATA_reg[7]) is unused and will be removed from module MAC_TX.
+WARNING: [Synth 8-3332] Sequential element (CRC32_top/FILL_DATA_reg[6]) is unused and will be removed from module MAC_TX.
+WARNING: [Synth 8-3332] Sequential element (CRC32_top/FILL_DATA_reg[5]) is unused and will be removed from module MAC_TX.
+WARNING: [Synth 8-3332] Sequential element (CRC32_top/FILL_DATA_reg[4]) is unused and will be removed from module MAC_TX.
+WARNING: [Synth 8-3332] Sequential element (CRC32_top/FILL_DATA_reg[3]) is unused and will be removed from module MAC_TX.
+WARNING: [Synth 8-3332] Sequential element (CRC32_top/FILL_DATA_reg[2]) is unused and will be removed from module MAC_TX.
+WARNING: [Synth 8-3332] Sequential element (CRC32_top/FILL_DATA_reg[1]) is unused and will be removed from module MAC_TX.
+WARNING: [Synth 8-3332] Sequential element (CRC32_top/FILL_DATA_reg[0]) is unused and will be removed from module MAC_TX.
+WARNING: [Synth 8-3332] Sequential element (rxFCSCheck_inst/crc_inst/FB_4_LAST_BYTE_reg[24]) is unused and will be removed from module RX.
+WARNING: [Synth 8-3332] Sequential element (rxFCSCheck_inst/crc_inst/INTER_DATA_reg[63]) is unused and will be removed from module RX.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/INTER_DATA_reg[63]/Q' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+WARNING: [Synth 8-3332] Sequential element (rxFCSCheck_inst/crc_inst/INTER_DATA_reg[62]) is unused and will be removed from module RX.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/INTER_DATA_reg[62]/Q' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+WARNING: [Synth 8-3332] Sequential element (rxFCSCheck_inst/crc_inst/INTER_DATA_reg[61]) is unused and will be removed from module RX.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/INTER_DATA_reg[61]/Q' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+WARNING: [Synth 8-3332] Sequential element (rxFCSCheck_inst/crc_inst/INTER_DATA_reg[60]) is unused and will be removed from module RX.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/INTER_DATA_reg[60]/Q' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+WARNING: [Synth 8-3332] Sequential element (rxFCSCheck_inst/crc_inst/INTER_DATA_reg[59]) is unused and will be removed from module RX.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/INTER_DATA_reg[59]/Q' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+WARNING: [Synth 8-3332] Sequential element (rxFCSCheck_inst/crc_inst/INTER_DATA_reg[58]) is unused and will be removed from module RX.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/INTER_DATA_reg[58]/Q' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+WARNING: [Synth 8-3332] Sequential element (rxFCSCheck_inst/crc_inst/INTER_DATA_reg[57]) is unused and will be removed from module RX.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/INTER_DATA_reg[57]/Q' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+WARNING: [Synth 8-3332] Sequential element (rxFCSCheck_inst/crc_inst/INTER_DATA_reg[56]) is unused and will be removed from module RX.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/INTER_DATA_reg[56]/Q' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+WARNING: [Synth 8-3332] Sequential element (rxFCSCheck_inst/crc_inst/INTER_DATA_reg[55]) is unused and will be removed from module RX.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/INTER_DATA_reg[55]/Q' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+WARNING: [Synth 8-3332] Sequential element (rxFCSCheck_inst/crc_inst/INTER_DATA_reg[54]) is unused and will be removed from module RX.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/INTER_DATA_reg[54]/Q' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+WARNING: [Synth 8-3332] Sequential element (rxFCSCheck_inst/crc_inst/INTER_DATA_reg[53]) is unused and will be removed from module RX.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/INTER_DATA_reg[53]/Q' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+WARNING: [Synth 8-3332] Sequential element (rxFCSCheck_inst/crc_inst/INTER_DATA_reg[52]) is unused and will be removed from module RX.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/INTER_DATA_reg[52]/Q' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+WARNING: [Synth 8-3332] Sequential element (rxFCSCheck_inst/crc_inst/INTER_DATA_reg[51]) is unused and will be removed from module RX.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/INTER_DATA_reg[51]/Q' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+WARNING: [Synth 8-3332] Sequential element (rxFCSCheck_inst/crc_inst/INTER_DATA_reg[50]) is unused and will be removed from module RX.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/INTER_DATA_reg[50]/Q' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+WARNING: [Synth 8-3332] Sequential element (rxFCSCheck_inst/crc_inst/INTER_DATA_reg[49]) is unused and will be removed from module RX.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/INTER_DATA_reg[49]/Q' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+WARNING: [Synth 8-3332] Sequential element (rxFCSCheck_inst/crc_inst/INTER_DATA_reg[48]) is unused and will be removed from module RX.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/INTER_DATA_reg[48]/Q' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+WARNING: [Synth 8-3332] Sequential element (rxFCSCheck_inst/crc_inst/INTER_DATA_reg[47]) is unused and will be removed from module RX.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/INTER_DATA_reg[47]/Q' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+WARNING: [Synth 8-3332] Sequential element (rxFCSCheck_inst/crc_inst/INTER_DATA_reg[46]) is unused and will be removed from module RX.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/INTER_DATA_reg[46]/Q' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+WARNING: [Synth 8-3332] Sequential element (rxFCSCheck_inst/crc_inst/INTER_DATA_reg[45]) is unused and will be removed from module RX.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/INTER_DATA_reg[45]/Q' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+WARNING: [Synth 8-3332] Sequential element (rxFCSCheck_inst/crc_inst/INTER_DATA_reg[44]) is unused and will be removed from module RX.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/INTER_DATA_reg[44]/Q' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+WARNING: [Synth 8-3332] Sequential element (rxFCSCheck_inst/crc_inst/INTER_DATA_reg[43]) is unused and will be removed from module RX.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/INTER_DATA_reg[43]/Q' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+WARNING: [Synth 8-3332] Sequential element (rxFCSCheck_inst/crc_inst/INTER_DATA_reg[42]) is unused and will be removed from module RX.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/INTER_DATA_reg[42]/Q' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+WARNING: [Synth 8-3332] Sequential element (rxFCSCheck_inst/crc_inst/INTER_DATA_reg[41]) is unused and will be removed from module RX.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/INTER_DATA_reg[41]/Q' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+WARNING: [Synth 8-3332] Sequential element (rxFCSCheck_inst/crc_inst/INTER_DATA_reg[40]) is unused and will be removed from module RX.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/INTER_DATA_reg[40]/Q' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+WARNING: [Synth 8-3332] Sequential element (rxFCSCheck_inst/crc_inst/INTER_DATA_reg[39]) is unused and will be removed from module RX.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/INTER_DATA_reg[39]/Q' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+WARNING: [Synth 8-3332] Sequential element (rxFCSCheck_inst/crc_inst/INTER_DATA_reg[38]) is unused and will be removed from module RX.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/INTER_DATA_reg[38]/Q' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+WARNING: [Synth 8-3332] Sequential element (rxFCSCheck_inst/crc_inst/INTER_DATA_reg[37]) is unused and will be removed from module RX.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/INTER_DATA_reg[37]/Q' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+WARNING: [Synth 8-3332] Sequential element (rxFCSCheck_inst/crc_inst/INTER_DATA_reg[36]) is unused and will be removed from module RX.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/INTER_DATA_reg[36]/Q' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+WARNING: [Synth 8-3332] Sequential element (rxFCSCheck_inst/crc_inst/INTER_DATA_reg[35]) is unused and will be removed from module RX.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/INTER_DATA_reg[35]/Q' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+WARNING: [Synth 8-3332] Sequential element (rxFCSCheck_inst/crc_inst/INTER_DATA_reg[34]) is unused and will be removed from module RX.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/INTER_DATA_reg[34]/Q' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+WARNING: [Synth 8-3332] Sequential element (rxFCSCheck_inst/crc_inst/INTER_DATA_reg[33]) is unused and will be removed from module RX.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/INTER_DATA_reg[33]/Q' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+WARNING: [Synth 8-3332] Sequential element (rxFCSCheck_inst/crc_inst/INTER_DATA_reg[32]) is unused and will be removed from module RX.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/INTER_DATA_reg[32]/Q' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+WARNING: [Synth 8-3332] Sequential element (rxFCSCheck_inst/crc_inst/INTER_DATA_reg[31]) is unused and will be removed from module RX.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/INTER_DATA_reg[31]/Q' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+WARNING: [Synth 8-3332] Sequential element (rxFCSCheck_inst/crc_inst/INTER_DATA_reg[30]) is unused and will be removed from module RX.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/INTER_DATA_reg[30]/Q' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+WARNING: [Synth 8-3332] Sequential element (rxFCSCheck_inst/crc_inst/INTER_DATA_reg[29]) is unused and will be removed from module RX.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/INTER_DATA_reg[29]/Q' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+WARNING: [Synth 8-3332] Sequential element (rxFCSCheck_inst/crc_inst/INTER_DATA_reg[28]) is unused and will be removed from module RX.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/INTER_DATA_reg[28]/Q' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+WARNING: [Synth 8-3332] Sequential element (rxFCSCheck_inst/crc_inst/INTER_DATA_reg[27]) is unused and will be removed from module RX.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/INTER_DATA_reg[27]/Q' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+WARNING: [Synth 8-3332] Sequential element (rxFCSCheck_inst/crc_inst/INTER_DATA_reg[26]) is unused and will be removed from module RX.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/INTER_DATA_reg[26]/Q' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+WARNING: [Synth 8-3332] Sequential element (rxFCSCheck_inst/crc_inst/INTER_DATA_reg[25]) is unused and will be removed from module RX.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/INTER_DATA_reg[25]/Q' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+WARNING: [Synth 8-3332] Sequential element (rxFCSCheck_inst/crc_inst/INTER_DATA_reg[24]) is unused and will be removed from module RX.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/INTER_DATA_reg[24]/Q' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+WARNING: [Synth 8-3332] Sequential element (rxFCSCheck_inst/crc_inst/INTER_DATA_reg[23]) is unused and will be removed from module RX.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/INTER_DATA_reg[23]/Q' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+WARNING: [Synth 8-3332] Sequential element (rxFCSCheck_inst/crc_inst/INTER_DATA_reg[22]) is unused and will be removed from module RX.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/INTER_DATA_reg[22]/Q' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+WARNING: [Synth 8-3332] Sequential element (rxFCSCheck_inst/crc_inst/INTER_DATA_reg[21]) is unused and will be removed from module RX.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/INTER_DATA_reg[21]/Q' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+WARNING: [Synth 8-3332] Sequential element (rxFCSCheck_inst/crc_inst/INTER_DATA_reg[20]) is unused and will be removed from module RX.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/INTER_DATA_reg[20]/Q' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+WARNING: [Synth 8-3332] Sequential element (rxFCSCheck_inst/crc_inst/INTER_DATA_reg[19]) is unused and will be removed from module RX.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/INTER_DATA_reg[19]/Q' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+WARNING: [Synth 8-3332] Sequential element (rxFCSCheck_inst/crc_inst/INTER_DATA_reg[18]) is unused and will be removed from module RX.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/INTER_DATA_reg[18]/Q' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+WARNING: [Synth 8-3332] Sequential element (rxFCSCheck_inst/crc_inst/INTER_DATA_reg[17]) is unused and will be removed from module RX.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/INTER_DATA_reg[17]/Q' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+WARNING: [Synth 8-3332] Sequential element (rxFCSCheck_inst/crc_inst/INTER_DATA_reg[16]) is unused and will be removed from module RX.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/INTER_DATA_reg[16]/Q' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+WARNING: [Synth 8-3332] Sequential element (rxFCSCheck_inst/crc_inst/INTER_DATA_reg[15]) is unused and will be removed from module RX.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/INTER_DATA_reg[15]/Q' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+WARNING: [Synth 8-3332] Sequential element (rxFCSCheck_inst/crc_inst/INTER_DATA_reg[14]) is unused and will be removed from module RX.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'nolabel_line67/nolabel_line41/rxFCSCheck_inst/crc_inst/INTER_DATA_reg[14]/Q' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+INFO: [Common 17-14] Message 'Synth 8-3352' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+WARNING: [Synth 8-3332] Sequential element (rxFCSCheck_inst/crc_inst/INTER_DATA_reg[13]) is unused and will be removed from module RX.
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+WARNING: [Synth 8-3332] Sequential element (rxFCSCheck_inst/crc_inst/INTER_DATA_reg[12]) is unused and will be removed from module RX.
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+WARNING: [Synth 8-3332] Sequential element (rxFCSCheck_inst/crc_inst/INTER_DATA_reg[11]) is unused and will be removed from module RX.
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+WARNING: [Synth 8-3332] Sequential element (rxFCSCheck_inst/crc_inst/INTER_DATA_reg[10]) is unused and will be removed from module RX.
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+WARNING: [Synth 8-3332] Sequential element (rxFCSCheck_inst/crc_inst/INTER_DATA_reg[9]) is unused and will be removed from module RX.
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+WARNING: [Synth 8-3332] Sequential element (rxFCSCheck_inst/crc_inst/INTER_DATA_reg[8]) is unused and will be removed from module RX.
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+WARNING: [Synth 8-3332] Sequential element (rxFCSCheck_inst/crc_inst/INTER_DATA_reg[7]) is unused and will be removed from module RX.
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+WARNING: [Synth 8-3332] Sequential element (rxFCSCheck_inst/crc_inst/INTER_DATA_reg[6]) is unused and will be removed from module RX.
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+WARNING: [Synth 8-3332] Sequential element (rxFCSCheck_inst/crc_inst/INTER_DATA_reg[5]) is unused and will be removed from module RX.
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+WARNING: [Synth 8-3332] Sequential element (rxFCSCheck_inst/crc_inst/INTER_DATA_reg[4]) is unused and will be removed from module RX.
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+WARNING: [Synth 8-3332] Sequential element (rxFCSCheck_inst/crc_inst/INTER_DATA_reg[3]) is unused and will be removed from module RX.
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+WARNING: [Synth 8-3332] Sequential element (rxFCSCheck_inst/crc_inst/INTER_DATA_reg[2]) is unused and will be removed from module RX.
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+WARNING: [Synth 8-3332] Sequential element (rxFCSCheck_inst/crc_inst/INTER_DATA_reg[1]) is unused and will be removed from module RX.
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+WARNING: [Synth 8-3332] Sequential element (rxFCSCheck_inst/crc_inst/INTER_DATA_reg[0]) is unused and will be removed from module RX.
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/CRC32.v:212]
+WARNING: [Synth 8-3332] Sequential element (rxFCSCheck_inst/crc_inst/INTER_DATA_reg[63]__0) is unused and will be removed from module RX.
+WARNING: [Synth 8-3332] Sequential element (rxFCSCheck_inst/crc_inst/INTER_DATA_reg[62]__0) is unused and will be removed from module RX.
+WARNING: [Synth 8-3332] Sequential element (rxFCSCheck_inst/crc_inst/INTER_DATA_reg[61]__0) is unused and will be removed from module RX.
+WARNING: [Synth 8-3332] Sequential element (rxFCSCheck_inst/crc_inst/INTER_DATA_reg[60]__0) is unused and will be removed from module RX.
+WARNING: [Synth 8-3332] Sequential element (rxFCSCheck_inst/crc_inst/INTER_DATA_reg[59]__0) is unused and will be removed from module RX.
+WARNING: [Synth 8-3332] Sequential element (rxFCSCheck_inst/crc_inst/INTER_DATA_reg[58]__0) is unused and will be removed from module RX.
+WARNING: [Synth 8-3332] Sequential element (rxFCSCheck_inst/crc_inst/INTER_DATA_reg[57]__0) is unused and will be removed from module RX.
+WARNING: [Synth 8-3332] Sequential element (rxFCSCheck_inst/crc_inst/INTER_DATA_reg[56]__0) is unused and will be removed from module RX.
+WARNING: [Synth 8-3332] Sequential element (rxFCSCheck_inst/crc_inst/INTER_DATA_reg[55]__0) is unused and will be removed from module RX.
+WARNING: [Synth 8-3332] Sequential element (rxFCSCheck_inst/crc_inst/INTER_DATA_reg[54]__0) is unused and will be removed from module RX.
+WARNING: [Synth 8-3332] Sequential element (rxFCSCheck_inst/crc_inst/INTER_DATA_reg[53]__0) is unused and will be removed from module RX.
+WARNING: [Synth 8-3332] Sequential element (rxFCSCheck_inst/crc_inst/INTER_DATA_reg[52]__0) is unused and will be removed from module RX.
+WARNING: [Synth 8-3332] Sequential element (rxFCSCheck_inst/crc_inst/INTER_DATA_reg[51]__0) is unused and will be removed from module RX.
+WARNING: [Synth 8-3332] Sequential element (rxFCSCheck_inst/crc_inst/INTER_DATA_reg[50]__0) is unused and will be removed from module RX.
+WARNING: [Synth 8-3332] Sequential element (rxFCSCheck_inst/crc_inst/INTER_DATA_reg[49]__0) is unused and will be removed from module RX.
+WARNING: [Synth 8-3332] Sequential element (rxFCSCheck_inst/crc_inst/INTER_DATA_reg[48]__0) is unused and will be removed from module RX.
+WARNING: [Synth 8-3332] Sequential element (rxFCSCheck_inst/crc_inst/INTER_DATA_reg[47]__0) is unused and will be removed from module RX.
+WARNING: [Synth 8-3332] Sequential element (rxFCSCheck_inst/crc_inst/INTER_DATA_reg[46]__0) is unused and will be removed from module RX.
+WARNING: [Synth 8-3332] Sequential element (rxFCSCheck_inst/crc_inst/INTER_DATA_reg[45]__0) is unused and will be removed from module RX.
+WARNING: [Synth 8-3332] Sequential element (rxFCSCheck_inst/crc_inst/INTER_DATA_reg[44]__0) is unused and will be removed from module RX.
+WARNING: [Synth 8-3332] Sequential element (rxFCSCheck_inst/crc_inst/INTER_DATA_reg[43]__0) is unused and will be removed from module RX.
+WARNING: [Synth 8-3332] Sequential element (rxFCSCheck_inst/crc_inst/INTER_DATA_reg[42]__0) is unused and will be removed from module RX.
+WARNING: [Synth 8-3332] Sequential element (rxFCSCheck_inst/crc_inst/INTER_DATA_reg[41]__0) is unused and will be removed from module RX.
+WARNING: [Synth 8-3332] Sequential element (rxFCSCheck_inst/crc_inst/INTER_DATA_reg[40]__0) is unused and will be removed from module RX.
+WARNING: [Synth 8-3332] Sequential element (rxFCSCheck_inst/crc_inst/INTER_DATA_reg[39]__0) is unused and will be removed from module RX.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3886] merging instance 'nolabel_line67/nolabel_line41/rxStateMach_inst/pre_valid_reg' (FDP) to 'nolabel_line67/nolabel_line41/rxFrameState_inst/pls_data_ind_valid_pipe_01_reg[0]'
+INFO: [Synth 8-3886] merging instance 'nolabel_line67/nolabel_line41/rxFrameState_inst/pls_data_ind_valid_pipe_01_reg[6]' (FDP) to 'nolabel_line67/nolabel_line41/rxFrameState_inst/pls_data_ind_valid_pipe_01_reg[7]'
+INFO: [Synth 8-3886] merging instance 'nolabel_line67/nolabel_line41/rxFrameState_inst/pls_data_ind_valid_pipe_01_reg[7]' (FDP) to 'nolabel_line67/nolabel_line41/rxFrameState_inst/pls_data_ind_valid_pipe_01_reg[5]'
+INFO: [Synth 8-3886] merging instance 'nolabel_line67/nolabel_line41/rxFrameState_inst/pls_data_ind_valid_pipe_01_reg[5]' (FDP) to 'nolabel_line67/nolabel_line41/rxFrameState_inst/pls_data_ind_valid_pipe_01_reg[4]'
+INFO: [Synth 8-3886] merging instance 'nolabel_line67/nolabel_line41/rxFrameState_inst/pls_data_ind_valid_pipe_01_reg[4]' (FDP) to 'nolabel_line67/nolabel_line41/rxFrameState_inst/pls_data_ind_valid_pipe_01_reg[3]'
+INFO: [Synth 8-3886] merging instance 'nolabel_line67/nolabel_line41/rxFrameState_inst/pls_data_ind_valid_pipe_01_reg[3]' (FDP) to 'nolabel_line67/nolabel_line41/rxFrameState_inst/pls_data_ind_valid_pipe_01_reg[2]'
+INFO: [Synth 8-3886] merging instance 'nolabel_line67/nolabel_line41/rxFrameState_inst/pls_data_ind_valid_pipe_01_reg[2]' (FDP) to 'nolabel_line67/nolabel_line41/rxFrameState_inst/pls_data_ind_valid_pipe_01_reg[1]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\nolabel_line67/nolabel_line41 /\rxFrameState_inst/pls_data_ind_valid_pipe_01_reg[1] )
+INFO: [Synth 8-3886] merging instance 'nolabel_line67/nolabel_line41/rxFrameState_inst/pls_data_ind_valid_pipe_02_reg[6]' (FDP) to 'nolabel_line67/nolabel_line41/rxFrameState_inst/pls_data_ind_valid_pipe_01_reg[1]'
+INFO: [Synth 8-3886] merging instance 'nolabel_line67/nolabel_line41/rxFrameState_inst/pls_data_ind_valid_pipe_02_reg[7]' (FDP) to 'nolabel_line67/nolabel_line41/rxFrameState_inst/pls_data_ind_valid_pipe_01_reg[1]'
+INFO: [Synth 8-3886] merging instance 'nolabel_line67/nolabel_line41/rxFrameState_inst/pls_data_ind_valid_pipe_02_reg[5]' (FDP) to 'nolabel_line67/nolabel_line41/rxFrameState_inst/pls_data_ind_valid_pipe_01_reg[1]'
+INFO: [Synth 8-3886] merging instance 'nolabel_line67/nolabel_line41/rxFrameState_inst/pls_data_ind_valid_pipe_02_reg[4]' (FDP) to 'nolabel_line67/nolabel_line41/rxFrameState_inst/pls_data_ind_valid_pipe_01_reg[1]'
+INFO: [Synth 8-3886] merging instance 'nolabel_line67/nolabel_line41/rxFrameState_inst/pls_data_ind_valid_pipe_02_reg[3]' (FDP) to 'nolabel_line67/nolabel_line41/rxFrameState_inst/pls_data_ind_valid_pipe_01_reg[1]'
+INFO: [Synth 8-3886] merging instance 'nolabel_line67/nolabel_line41/rxFrameState_inst/pls_data_ind_valid_pipe_02_reg[2]' (FDP) to 'nolabel_line67/nolabel_line41/rxFrameState_inst/pls_data_ind_valid_pipe_01_reg[1]'
+INFO: [Synth 8-3886] merging instance 'nolabel_line67/nolabel_line41/rxFrameState_inst/pls_data_ind_valid_pipe_02_reg[1]' (FDP) to 'nolabel_line67/nolabel_line41/rxFrameState_inst/pls_data_ind_valid_pipe_01_reg[1]'
+INFO: [Synth 8-3886] merging instance 'nolabel_line67/nolabel_line41/rxFrameState_inst/data_valid_reg[0]' (FDC) to 'nolabel_line67/nolabel_line41/rxFrameState_inst/data_valid_reg[1]'
+INFO: [Synth 8-3886] merging instance 'nolabel_line67/nolabel_line41/rxFrameState_inst/data_valid_reg[1]' (FDC) to 'nolabel_line67/nolabel_line41/rxFrameState_inst/data_valid_reg[2]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\nolabel_line67/nolabel_line41 /\rxFrameState_inst/pls_data_ind_valid_pipe_01_reg[1] )
+INFO: [Synth 8-3886] merging instance 'nolabel_line67/nolabel_line41/rxSynchr_inst/valid_pipe_reg[0]' (FDR) to 'nolabel_line67/nolabel_line41/rxSynchr_inst/valid_pipe_reg[1]'
+INFO: [Synth 8-3886] merging instance 'nolabel_line67/nolabel_line41/rxSynchr_inst/valid_pipe_reg[1]' (FDR) to 'nolabel_line67/nolabel_line41/rxSynchr_inst/valid_pipe_reg[2]'
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/rxRSstateMach.v:46]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/rxRSstateMach.v:46]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/rxRSstateMach.v:46]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/rxRSstateMach.v:46]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/rxRSstateMach.v:46]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/rxRSstateMach.v:46]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/rxRSstateMach.v:46]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/rxRSstateMach.v:46]
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:01:15 . Memory (MB): peak = 723.184 ; gain = 513.102
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+ROM:
++------------+------------+---------------+----------------+
+|Module Name | RTL Object | Depth x Width | Implemented As | 
++------------+------------+---------------+----------------+
+|lut_08      | p_0_out    | 256x32        | LUT            | 
+|lut_07      | p_0_out    | 256x32        | LUT            | 
+|lut_06      | p_0_out    | 256x32        | LUT            | 
+|lut_05      | p_0_out    | 256x32        | LUT            | 
+|lut_04      | p_0_out    | 256x32        | LUT            | 
+|lut_03      | p_0_out    | 256x32        | LUT            | 
+|lut_02      | p_0_out    | 256x32        | LUT            | 
+|lut_01      | p_0_out    | 256x32        | LUT            | 
+|CRC32_TX    | p_0_out    | 256x32        | LUT            | 
+|CRC32_TX    | p_0_out    | 256x32        | LUT            | 
+|CRC32_TX    | p_0_out    | 256x32        | LUT            | 
+|CRC32_TX    | p_0_out    | 256x32        | LUT            | 
+|CRC32_TX    | p_0_out    | 256x32        | LUT            | 
+|CRC32_TX    | p_0_out    | 256x32        | LUT            | 
+|CRC32_TX    | p_0_out    | 256x32        | LUT            | 
+|CRC32_TX    | p_0_out    | 256x32        | LUT            | 
+|rxFCSCheck  | p_0_out    | 256x32        | LUT            | 
+|rxFCSCheck  | p_0_out    | 256x32        | LUT            | 
+|rxFCSCheck  | p_0_out    | 256x32        | LUT            | 
+|rxFCSCheck  | p_0_out    | 256x32        | LUT            | 
+|rxFCSCheck  | p_0_out    | 256x32        | LUT            | 
+|rxFCSCheck  | p_0_out    | 256x32        | LUT            | 
+|rxFCSCheck  | p_0_out    | 256x32        | LUT            | 
+|rxFCSCheck  | p_0_out    | 256x32        | LUT            | 
++------------+------------+---------------+----------------+
+
+
+Block RAM: Preliminary Mapping  Report (see note below)
++------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name | RTL Object | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|data_FIFO   | Mem_reg    | 512 x 64               | W |   | 512 x 64(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      | 
+|length_FIFO | Mem_reg    | 256 x 16               | W |   | 256 x 16(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|data_FIFO   | Mem_reg    | 512 x 70               | W |   | 512 x 70(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      | 
++------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:01:16 . Memory (MB): peak = 723.184 ; gain = 513.102
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3886] merging instance 'TX_TOP/data_FIFO_top/GrayCounter_pRd/BinaryCount_reg[1]' (FDRE) to 'TX_TOP/data_FIFO_top/GrayCounter_pRd/GrayCount_out_reg[0]'
+INFO: [Synth 8-3886] merging instance 'nolabel_line67/nolabel_line41/rxSynchr_inst/data_fifo_inst/GrayCounter_pWr/BinaryCount_reg[1]' (FDRE) to 'nolabel_line67/nolabel_line41/rxSynchr_inst/data_fifo_inst/GrayCounter_pWr/GrayCount_out_reg[0]'
+INFO: [Synth 8-3886] merging instance 'nolabel_line67/nolabel_line41/rxSynchr_inst/data_fifo_inst/GrayCounter_pRd/BinaryCount_reg[1]' (FDRE) to 'nolabel_line67/nolabel_line41/rxSynchr_inst/data_fifo_inst/GrayCounter_pRd/GrayCount_out_reg[0]'
+INFO: [Synth 8-3886] merging instance 'TX_TOP/length_FIFO_top/GrayCounter_pRd/BinaryCount_reg[1]' (FDRE) to 'TX_TOP/length_FIFO_top/GrayCounter_pRd/GrayCount_out_reg[0]'
+INFO: [Synth 8-3886] merging instance 'TX_TOP/length_FIFO_top/GrayCounter_pWr/BinaryCount_reg[1]' (FDRE) to 'TX_TOP/length_FIFO_top/GrayCounter_pWr/GrayCount_out_reg[0]'
+INFO: [Synth 8-4480] The timing for the instance TX_TOP/data_FIFO_top/Mem_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance TX_TOP/length_FIFO_top/Mem_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance nolabel_line67/nolabel_line41/rxSynchr_inst/data_fifo_inst/Mem_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:31 ; elapsed = 00:01:17 . Memory (MB): peak = 723.184 ; gain = 513.102
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:32 ; elapsed = 00:01:17 . Memory (MB): peak = 723.184 ; gain = 513.102
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:32 ; elapsed = 00:01:17 . Memory (MB): peak = 723.184 ; gain = 513.102
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:32 ; elapsed = 00:01:18 . Memory (MB): peak = 723.184 ; gain = 513.102
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:32 ; elapsed = 00:01:18 . Memory (MB): peak = 723.184 ; gain = 513.102
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:32 ; elapsed = 00:01:18 . Memory (MB): peak = 723.184 ; gain = 513.102
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:32 ; elapsed = 00:01:18 . Memory (MB): peak = 723.184 ; gain = 513.102
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |BUFG     |     3|
+|2     |CARRY4   |    84|
+|3     |LUT1     |   255|
+|4     |LUT2     |   136|
+|5     |LUT3     |   194|
+|6     |LUT4     |   184|
+|7     |LUT5     |   296|
+|8     |LUT6     |   529|
+|9     |MUXF7    |     8|
+|10    |RAMB18E1 |     1|
+|11    |RAMB36E1 |     2|
+|12    |XORCY    |     2|
+|13    |FDCE     |   225|
+|14    |FDPE     |    52|
+|15    |FDRE     |   427|
+|16    |FDSE     |    19|
+|17    |LDC      |     3|
+|18    |IBUF     |   148|
+|19    |OBUF     |   145|
++------+---------+------+
+
+Report Instance Areas: 
++------+--------------------------+----------------------------+------+
+|      |Instance                  |Module                      |Cells |
++------+--------------------------+----------------------------+------+
+|1     |top                       |                            |  2713|
+|2     |  TX_TOP                  |MAC_TX                      |  1747|
+|3     |    CRC32_top             |CRC32_TX                    |   212|
+|4     |    D_FETCH_Top           |D_FETCH                     |  1081|
+|5     |    data_FIFO_top         |data_FIFO                   |   199|
+|6     |      GrayCounter_pRd     |GrayCounter_0               |    35|
+|7     |      GrayCounter_pWr     |GrayCounterWrite_1          |    30|
+|8     |    data_trans_top        |data_trans                  |   132|
+|9     |    length_FIFO_top       |length_FIFO                 |   123|
+|10    |      GrayCounter_pRd     |GrayCounter__parameterized1 |    31|
+|11    |      GrayCounter_pWr     |GrayCounter__parameterized0 |    36|
+|12    |  nolabel_line67          |MAC_RX                      |   670|
+|13    |    nolabel_line41        |RX                          |   514|
+|14    |      lenTypeReg_inst     |lenTypeReg                  |    67|
+|15    |      rxFrameState_inst   |rxFrameState                |   277|
+|16    |      rxStateMach_inst    |rxStateMach                 |    12|
+|17    |      rxSynchr_inst       |rxSynchr                    |   158|
+|18    |        data_fifo_inst    |data_FIFO__parameterized0   |    88|
+|19    |          GrayCounter_pRd |GrayCounter                 |    37|
+|20    |          GrayCounter_pWr |GrayCounterWrite            |    42|
+|21    |    nolabel_line56        |rxRS                        |   155|
+|22    |      dataCor_inst        |dataCor                     |   110|
+|23    |      rxRSstateMach_inst  |rxRSstateMach               |    45|
++------+--------------------------+----------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:32 ; elapsed = 00:01:18 . Memory (MB): peak = 723.184 ; gain = 513.102
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 217 critical warnings and 273 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:28 ; elapsed = 00:00:32 . Memory (MB): peak = 723.184 ; gain = 471.234
+Synthesis Optimization Complete : Time (s): cpu = 00:00:32 ; elapsed = 00:01:18 . Memory (MB): peak = 723.184 ; gain = 513.102
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 240 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 5 instances were transformed.
+  (MUXCY,XORCY) => CARRY4: 2 instances
+  LDC => LDCE: 3 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+235 Infos, 200 Warnings, 173 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:43 ; elapsed = 00:01:37 . Memory (MB): peak = 792.488 ; gain = 553.277
+INFO: [Common 17-1381] The checkpoint 'C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.runs/synth_1/MAC.dcp' has been generated.
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.266 . Memory (MB): peak = 792.488 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Mon Nov 05 12:03:35 2018...

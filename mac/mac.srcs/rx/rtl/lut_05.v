@@ -1,0 +1,292 @@
+`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer: 
+// 
+// Create Date: 11/03/2018 01:27:28 PM
+// Design Name: 
+// Module Name: lut_05
+// Project Name: 
+// Target Devices: 
+// Tool Versions: 
+// Description: 
+// 
+// Dependencies: 
+// 
+// Revision:
+// Revision 0.01 - File Created
+// Additional Comments:
+// 
+//////////////////////////////////////////////////////////////////////////////////
+
+
+module lut_05(
+    input [7:0] DATA_IN,
+    output [31:0] CRC_VALUE
+    );
+    
+    
+    reg [31:0] rom[255:0];
+    assign CRC_VALUE = rom[DATA_IN];
+    
+    initial
+    begin
+        rom[0] <= 32'h00000000;
+        rom[1] <= 32'h490d678d;
+        rom[2] <= 32'h921acf1a;
+        rom[3] <= 32'hdb17a897;
+        rom[4] <= 32'h20f48383;
+        rom[5] <= 32'h69f9e40e;
+        rom[6] <= 32'hb2ee4c99;
+        rom[7] <= 32'hfbe32b14;
+        rom[8] <= 32'h41e90706;
+        rom[9] <= 32'h08e4608b;
+        rom[10] <= 32'hd3f3c81c;
+        rom[11] <= 32'h9afeaf91;
+        rom[12] <= 32'h611d8485;
+        rom[13] <= 32'h2810e308;
+        rom[14] <= 32'hf3074b9f;
+        rom[15] <= 32'hba0a2c12;
+        rom[16] <= 32'h83d20e0c;
+        rom[17] <= 32'hcadf6981;
+        rom[18] <= 32'h11c8c116;
+        rom[19] <= 32'h58c5a69b;
+        rom[20] <= 32'ha3268d8f;
+        rom[21] <= 32'hea2bea02;
+        rom[22] <= 32'h313c4295;
+        rom[23] <= 32'h78312518;
+        rom[24] <= 32'hc23b090a;
+        rom[25] <= 32'h8b366e87;
+        rom[26] <= 32'h5021c610;
+        rom[27] <= 32'h192ca19d;
+        rom[28] <= 32'he2cf8a89;
+        rom[29] <= 32'habc2ed04;
+        rom[30] <= 32'h70d54593;
+        rom[31] <= 32'h39d8221e;
+        rom[32] <= 32'h036501af;
+        rom[33] <= 32'h4a686622;
+        rom[34] <= 32'h917fceb5;
+        rom[35] <= 32'hd872a938;
+        rom[36] <= 32'h2391822c;
+        rom[37] <= 32'h6a9ce5a1;
+        rom[38] <= 32'hb18b4d36;
+        rom[39] <= 32'hf8862abb;
+        rom[40] <= 32'h428c06a9;
+        rom[41] <= 32'h0b816124;
+        rom[42] <= 32'hd096c9b3;
+        rom[43] <= 32'h999bae3e;
+        rom[44] <= 32'h6278852a;
+        rom[45] <= 32'h2b75e2a7;
+        rom[46] <= 32'hf0624a30;
+        rom[47] <= 32'hb96f2dbd;
+        rom[48] <= 32'h80b70fa3;
+        rom[49] <= 32'hc9ba682e;
+        rom[50] <= 32'h12adc0b9;
+        rom[51] <= 32'h5ba0a734;
+        rom[52] <= 32'ha0438c20;
+        rom[53] <= 32'he94eebad;
+        rom[54] <= 32'h3259433a;
+        rom[55] <= 32'h7b5424b7;
+        rom[56] <= 32'hc15e08a5;
+        rom[57] <= 32'h88536f28;
+        rom[58] <= 32'h5344c7bf;
+        rom[59] <= 32'h1a49a032;
+        rom[60] <= 32'he1aa8b26;
+        rom[61] <= 32'ha8a7ecab;
+        rom[62] <= 32'h73b0443c;
+        rom[63] <= 32'h3abd23b1;
+        rom[64] <= 32'h06ca035e;
+        rom[65] <= 32'h4fc764d3;
+        rom[66] <= 32'h94d0cc44;
+        rom[67] <= 32'hddddabc9;
+        rom[68] <= 32'h263e80dd;
+        rom[69] <= 32'h6f33e750;
+        rom[70] <= 32'hb4244fc7;
+        rom[71] <= 32'hfd29284a;
+        rom[72] <= 32'h47230458;
+        rom[73] <= 32'h0e2e63d5;
+        rom[74] <= 32'hd539cb42;
+        rom[75] <= 32'h9c34accf;
+        rom[76] <= 32'h67d787db;
+        rom[77] <= 32'h2edae056;
+        rom[78] <= 32'hf5cd48c1;
+        rom[79] <= 32'hbcc02f4c;
+        rom[80] <= 32'h85180d52;
+        rom[81] <= 32'hcc156adf;
+        rom[82] <= 32'h1702c248;
+        rom[83] <= 32'h5e0fa5c5;
+        rom[84] <= 32'ha5ec8ed1;
+        rom[85] <= 32'hece1e95c;
+        rom[86] <= 32'h37f641cb;
+        rom[87] <= 32'h7efb2646;
+        rom[88] <= 32'hc4f10a54;
+        rom[89] <= 32'h8dfc6dd9;
+        rom[90] <= 32'h56ebc54e;
+        rom[91] <= 32'h1fe6a2c3;
+        rom[92] <= 32'he40589d7;
+        rom[93] <= 32'had08ee5a;
+        rom[94] <= 32'h761f46cd;
+        rom[95] <= 32'h3f122140;
+        rom[96] <= 32'h05af02f1;
+        rom[97] <= 32'h4ca2657c;
+        rom[98] <= 32'h97b5cdeb;
+        rom[99] <= 32'hdeb8aa66;
+        rom[100] <= 32'h255b8172;
+        rom[101] <= 32'h6c56e6ff;
+        rom[102] <= 32'hb7414e68;
+        rom[103] <= 32'hfe4c29e5;
+        rom[104] <= 32'h444605f7;
+        rom[105] <= 32'h0d4b627a;
+        rom[106] <= 32'hd65ccaed;
+        rom[107] <= 32'h9f51ad60;
+        rom[108] <= 32'h64b28674;
+        rom[109] <= 32'h2dbfe1f9;
+        rom[110] <= 32'hf6a8496e;
+        rom[111] <= 32'hbfa52ee3;
+        rom[112] <= 32'h867d0cfd;
+        rom[113] <= 32'hcf706b70;
+        rom[114] <= 32'h1467c3e7;
+        rom[115] <= 32'h5d6aa46a;
+        rom[116] <= 32'ha6898f7e;
+        rom[117] <= 32'hef84e8f3;
+        rom[118] <= 32'h34934064;
+        rom[119] <= 32'h7d9e27e9;
+        rom[120] <= 32'hc7940bfb;
+        rom[121] <= 32'h8e996c76;
+        rom[122] <= 32'h558ec4e1;
+        rom[123] <= 32'h1c83a36c;
+        rom[124] <= 32'he7608878;
+        rom[125] <= 32'hae6deff5;
+        rom[126] <= 32'h757a4762;
+        rom[127] <= 32'h3c7720ef;
+        rom[128] <= 32'h0d9406bc;
+        rom[129] <= 32'h44996131;
+        rom[130] <= 32'h9f8ec9a6;
+        rom[131] <= 32'hd683ae2b;
+        rom[132] <= 32'h2d60853f;
+        rom[133] <= 32'h646de2b2;
+        rom[134] <= 32'hbf7a4a25;
+        rom[135] <= 32'hf6772da8;
+        rom[136] <= 32'h4c7d01ba;
+        rom[137] <= 32'h05706637;
+        rom[138] <= 32'hde67cea0;
+        rom[139] <= 32'h976aa92d;
+        rom[140] <= 32'h6c898239;
+        rom[141] <= 32'h2584e5b4;
+        rom[142] <= 32'hfe934d23;
+        rom[143] <= 32'hb79e2aae;
+        rom[144] <= 32'h8e4608b0;
+        rom[145] <= 32'hc74b6f3d;
+        rom[146] <= 32'h1c5cc7aa;
+        rom[147] <= 32'h5551a027;
+        rom[148] <= 32'haeb28b33;
+        rom[149] <= 32'he7bfecbe;
+        rom[150] <= 32'h3ca84429;
+        rom[151] <= 32'h75a523a4;
+        rom[152] <= 32'hcfaf0fb6;
+        rom[153] <= 32'h86a2683b;
+        rom[154] <= 32'h5db5c0ac;
+        rom[155] <= 32'h14b8a721;
+        rom[156] <= 32'hef5b8c35;
+        rom[157] <= 32'ha656ebb8;
+        rom[158] <= 32'h7d41432f;
+        rom[159] <= 32'h344c24a2;
+        rom[160] <= 32'h0ef10713;
+        rom[161] <= 32'h47fc609e;
+        rom[162] <= 32'h9cebc809;
+        rom[163] <= 32'hd5e6af84;
+        rom[164] <= 32'h2e058490;
+        rom[165] <= 32'h6708e31d;
+        rom[166] <= 32'hbc1f4b8a;
+        rom[167] <= 32'hf5122c07;
+        rom[168] <= 32'h4f180015;
+        rom[169] <= 32'h06156798;
+        rom[170] <= 32'hdd02cf0f;
+        rom[171] <= 32'h940fa882;
+        rom[172] <= 32'h6fec8396;
+        rom[173] <= 32'h26e1e41b;
+        rom[174] <= 32'hfdf64c8c;
+        rom[175] <= 32'hb4fb2b01;
+        rom[176] <= 32'h8d23091f;
+        rom[177] <= 32'hc42e6e92;
+        rom[178] <= 32'h1f39c605;
+        rom[179] <= 32'h5634a188;
+        rom[180] <= 32'hadd78a9c;
+        rom[181] <= 32'he4daed11;
+        rom[182] <= 32'h3fcd4586;
+        rom[183] <= 32'h76c0220b;
+        rom[184] <= 32'hccca0e19;
+        rom[185] <= 32'h85c76994;
+        rom[186] <= 32'h5ed0c103;
+        rom[187] <= 32'h17dda68e;
+        rom[188] <= 32'hec3e8d9a;
+        rom[189] <= 32'ha533ea17;
+        rom[190] <= 32'h7e244280;
+        rom[191] <= 32'h3729250d;
+        rom[192] <= 32'h0b5e05e2;
+        rom[193] <= 32'h4253626f;
+        rom[194] <= 32'h9944caf8;
+        rom[195] <= 32'hd049ad75;
+        rom[196] <= 32'h2baa8661;
+        rom[197] <= 32'h62a7e1ec;
+        rom[198] <= 32'hb9b0497b;
+        rom[199] <= 32'hf0bd2ef6;
+        rom[200] <= 32'h4ab702e4;
+        rom[201] <= 32'h03ba6569;
+        rom[202] <= 32'hd8adcdfe;
+        rom[203] <= 32'h91a0aa73;
+        rom[204] <= 32'h6a438167;
+        rom[205] <= 32'h234ee6ea;
+        rom[206] <= 32'hf8594e7d;
+        rom[207] <= 32'hb15429f0;
+        rom[208] <= 32'h888c0bee;
+        rom[209] <= 32'hc1816c63;
+        rom[210] <= 32'h1a96c4f4;
+        rom[211] <= 32'h539ba379;
+        rom[212] <= 32'ha878886d;
+        rom[213] <= 32'he175efe0;
+        rom[214] <= 32'h3a624777;
+        rom[215] <= 32'h736f20fa;
+        rom[216] <= 32'hc9650ce8;
+        rom[217] <= 32'h80686b65;
+        rom[218] <= 32'h5b7fc3f2;
+        rom[219] <= 32'h1272a47f;
+        rom[220] <= 32'he9918f6b;
+        rom[221] <= 32'ha09ce8e6;
+        rom[222] <= 32'h7b8b4071;
+        rom[223] <= 32'h328627fc;
+        rom[224] <= 32'h083b044d;
+        rom[225] <= 32'h413663c0;
+        rom[226] <= 32'h9a21cb57;
+        rom[227] <= 32'hd32cacda;
+        rom[228] <= 32'h28cf87ce;
+        rom[229] <= 32'h61c2e043;
+        rom[230] <= 32'hbad548d4;
+        rom[231] <= 32'hf3d82f59;
+        rom[232] <= 32'h49d2034b;
+        rom[233] <= 32'h00df64c6;
+        rom[234] <= 32'hdbc8cc51;
+        rom[235] <= 32'h92c5abdc;
+        rom[236] <= 32'h692680c8;
+        rom[237] <= 32'h202be745;
+        rom[238] <= 32'hfb3c4fd2;
+        rom[239] <= 32'hb231285f;
+        rom[240] <= 32'h8be90a41;
+        rom[241] <= 32'hc2e46dcc;
+        rom[242] <= 32'h19f3c55b;
+        rom[243] <= 32'h50fea2d6;
+        rom[244] <= 32'hab1d89c2;
+        rom[245] <= 32'he210ee4f;
+        rom[246] <= 32'h390746d8;
+        rom[247] <= 32'h700a2155;
+        rom[248] <= 32'hca000d47;
+        rom[249] <= 32'h830d6aca;
+        rom[250] <= 32'h581ac25d;
+        rom[251] <= 32'h1117a5d0;
+        rom[252] <= 32'heaf48ec4;
+        rom[253] <= 32'ha3f9e949;
+        rom[254] <= 32'h78ee41de;
+        rom[255] <= 32'h31e32653;
+    end
+    
+endmodule

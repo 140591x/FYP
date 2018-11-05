@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2016.4 (64-bit)
+# SW Build 1756540 on Mon Jan 23 19:11:23 MST 2017
+# IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
+# Start of session at: Mon Nov 05 12:01:44 2018
+# Process ID: 9320
+# Current directory: C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.runs/synth_1
+# Command line: vivado.exe -log MAC.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source MAC.tcl
+# Log file: C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.runs/synth_1/MAC.vds
+# Journal file: C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source MAC.tcl -notrace

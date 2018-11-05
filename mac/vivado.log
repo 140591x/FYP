@@ -1,0 +1,25 @@
+#-----------------------------------------------------------
+# Vivado v2016.4 (64-bit)
+# SW Build 1756540 on Mon Jan 23 19:11:23 MST 2017
+# IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
+# Start of session at: Mon Nov 05 00:47:24 2018
+# Process ID: 5704
+# Current directory: C:/Users/sdS/OneDrive/FYP/ip_core/mac
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent7212 C:\Users\sdS\OneDrive\FYP\ip_core\mac\mac.xpr
+# Log file: C:/Users/sdS/OneDrive/FYP/ip_core/mac/vivado.log
+# Journal file: C:/Users/sdS/OneDrive/FYP/ip_core/mac\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2016.4/data/ip'.
+add_files {C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/tx/rtl}
+remove_files  C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/tx/rtl/MAC_CORE.v
+remove_files  {C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/tx/rtl/GrayCounterData.v C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/tx/rtl/GrayCounterWr.v C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/tx/rtl/lut_01.v C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/tx/rtl/lut_02.v C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/tx/rtl/lut_03.v C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/tx/rtl/lut_04.v C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/tx/rtl/lut_05.v C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/tx/rtl/lut_06.v C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/tx/rtl/lut_07.v C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/tx/rtl/lut_08.v}
+remove_files  {C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/tx/rtl/data_FIFO.v C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/GrayCounterWr.v C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/rx/rtl/GrayCounterData.v}
+add_files -norecurse {C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/tx/rtl/GrayCounterWr.v C:/Users/sdS/OneDrive/FYP/ip_core/mac/mac.srcs/tx/rtl/GrayCounterData.v}
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon Nov 05 00:56:07 2018...
