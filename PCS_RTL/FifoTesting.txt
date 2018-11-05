@@ -1,0 +1,21 @@
+//Transmitter
+LED0 - Tx hdmitopcs fifo empty
+LED1 - Tx hdmitopcs fifo full
+N4 - LED Reset button
+////////////
+
+//Receiver
+LED0 - Rx pcstohdmi fifo empty
+LED1 - Rx pcstohdmi fifo full
+LED2 - PCS top fifo empty
+LED3 - PCS top fifo full
+N4 - LED Reset button
+////////////
+
+//Receiver pcstohdmi fifo mid point setting
+P4 - bt_mid 
+////////////
+
+//error block detection
+M13 - error block detector reset
+////////////
